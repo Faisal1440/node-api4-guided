@@ -9,6 +9,9 @@ server.use(helmet());
 
 server.use('/api', apiRouter);
 
+server.get("/", (req, res) => {
+    res.status(200).json({ hello: "Web32" });
+  });
 
 
 module.exports = server;
